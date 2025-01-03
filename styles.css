@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: white;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.page {
+    display: none;
+}
+
+#register-page, #login-page {
+    display: block;
+    text-align: center;
+    max-width: 400px;
+    margin: auto;
+}
+
+input {
+    width: 80%;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+}
+
+button {
+    background-color: #1db954;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #1aa34a;
+}
+
+a {
+    color: #1db954;
+    text-decoration: none;
+}
+
+.music-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.music-card {
+    background-color: #181818;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 200px;
+}
+
+.music-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.profile-info {
+    text-align: center;
+    max-width: 400px;
+    margin: auto;
+}
+
+.btn {
+    background-color: #1db954;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    background-color: #1aa34a;
+}
+
+
+/* Music card container */
+.music-card {
+    width: 250px;
+    margin: 20px auto;
+    background-color: #6e4ed6;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Music image */
+.music-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    animation: scaleUp 1.5s ease-in-out;
+}
+
+/* Music details section */
+.music-details {
+    padding: 15px;
+    text-align: center;
+    opacity: 0;
+    animation: slideUp 1.5s ease-in-out forwards;
+}
+
+.music-details h3 {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.music-details p {
+    color: #777;
+}
+
+/* Fade-in animation for the music card */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Scale-up animation for the image */
+@keyframes scaleUp {
+    0% { transform: scale(0.9); opacity: 0.8; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* Slide-up animation for the details section */
+@keyframes slideUp {
+    0% { transform: translateY(20px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
